@@ -59,22 +59,18 @@
 
           <nav class="nav-menu" id="navMenu">
             <a href="#" class="nav-link active">Home</a>
-            <a href="#about" class="nav-link">About Us</a>
-            <div class="dropdown-item">
-              <a href="#services" class="nav-link dropdown-toggle">Solutions <i
-                  class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
-              <div class="dropdown-menu">
-                <a href="#services" class="dropdown-link">Solar EPC</a>
-                <a href="#services" class="dropdown-link">Power Transmission</a>
-                <a href="#services" class="dropdown-link">Energy Storage</a>
-              </div>
-            </div>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="#services" class="nav-link">Solutions</a>
             <a href="#why-choose" class="nav-link">Why Choose Us</a>
             <a href="#process" class="nav-link">Our Process</a>
             <a href="#pm-surya-ghar" class="nav-link">PM Surya Ghar</a>
             <a href="#commitment" class="nav-link">Our Commitment</a>
             <a href="#faq" class="nav-link">FAQs</a>
             <a href="#contact" class="nav-link">Contact Us</a>
+            <a href="#contact" class="nav-link drawer-cta" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+              Get Free Quote
+              <i class="fa-regular fa-circle-right quote-arrow-icon"></i>
+            </a>
           </nav>
 
           <div class="cta-area">
@@ -334,9 +330,9 @@
           <div class="solution-card-img-wrap">
             <img src="assets/images/solar_residential.png" alt="Residential Rooftop Solar Systems"
               class="solution-card-img">
-            <div class="solution-card-icon-badge solution-badge-navy">
-              <i class="fa-solid fa-house"></i>
-            </div>
+          </div>
+          <div class="solution-card-icon-badge solution-badge-navy">
+            <i class="fa-solid fa-house"></i>
           </div>
           <div class="solution-card-body">
             <h3 class="solution-card-title">Residential Rooftop Solar Systems</h3>
@@ -356,9 +352,9 @@
         <div class="solution-card">
           <div class="solution-card-img-wrap">
             <img src="assets/images/solar_commercial.png" alt="Commercial Solar Solutions" class="solution-card-img">
-            <div class="solution-card-icon-badge solution-badge-navy">
-              <i class="fa-solid fa-building"></i>
-            </div>
+          </div>
+          <div class="solution-card-icon-badge solution-badge-navy">
+            <i class="fa-solid fa-building"></i>
           </div>
           <div class="solution-card-body">
             <h3 class="solution-card-title">Commercial Solar Solutions</h3>
@@ -378,9 +374,9 @@
         <div class="solution-card">
           <div class="solution-card-img-wrap">
             <img src="assets/images/solar_industrial.png" alt="Industrial Solar Solutions" class="solution-card-img">
-            <div class="solution-card-icon-badge solution-badge-orange">
-              <i class="fa-solid fa-industry"></i>
-            </div>
+          </div>
+          <div class="solution-card-icon-badge solution-badge-orange">
+            <i class="fa-solid fa-industry"></i>
           </div>
           <div class="solution-card-body">
             <h3 class="solution-card-title">Industrial Solar Solutions</h3>
@@ -400,9 +396,9 @@
         <div class="solution-card">
           <div class="solution-card-img-wrap">
             <img src="assets/images/solar_water_pump.png" alt="Solar Water Pump Solutions" class="solution-card-img">
-            <div class="solution-card-icon-badge solution-badge-green">
-              <i class="fa-solid fa-droplet"></i>
-            </div>
+          </div>
+          <div class="solution-card-icon-badge solution-badge-green">
+            <i class="fa-solid fa-droplet"></i>
           </div>
           <div class="solution-card-body">
             <h3 class="solution-card-title">Solar Water Pump Solutions</h3>
@@ -422,9 +418,9 @@
           <div class="solution-card-img-wrap">
             <img src="assets/images/solar_water_heating.png" alt="Solar Water Heating Systems"
               class="solution-card-img">
-            <div class="solution-card-icon-badge solution-badge-navy">
-              <i class="fa-solid fa-temperature-high"></i>
-            </div>
+          </div>
+          <div class="solution-card-icon-badge solution-badge-navy">
+            <i class="fa-solid fa-temperature-high"></i>
           </div>
           <div class="solution-card-body">
             <h3 class="solution-card-title">Solar Water Heating Systems</h3>
@@ -934,7 +930,7 @@
         <div class="footer-col links-col">
           <h4>Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="#about">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="#why-choose">Why Choose ZRN Solar</a></li>
             <li><a href="#services">Our Solar Solutions</a></li>
             <li><a href="#process">Our Process</a></li>
