@@ -1,0 +1,383 @@
+/* =============================================
+   OUR COMMITMENT — PAGE-SPECIFIC STYLES
+   (Design tokens inherited from styles.css)
+   ============================================= */
+
+/* ── Hero Section ───────────────────────────── */
+.commitment-hero-breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: rgba(13, 40, 90, 0.6);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.commitment-hero-breadcrumb a {
+  color: rgba(13, 40, 90, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.commitment-hero-breadcrumb a:hover {
+  color: var(--brand-green);
+}
+
+.commitment-hero-breadcrumb span {
+  color: var(--brand-green);
+  font-weight: 700;
+}
+
+.commitment-hero-breadcrumb i {
+  font-size: 0.7rem;
+  color: rgba(13, 40, 90, 0.4);
+}
+
+/* ── Section Structure ──────────────────────── */
+.cm-section {
+  padding: 90px 0;
+  box-sizing: border-box;
+}
+
+.cm-bg-light {
+  background-color: var(--brand-light-gray);
+  border-top: 1px solid rgba(13, 40, 90, 0.07);
+  border-bottom: 1px solid rgba(13, 40, 90, 0.07);
+}
+
+.cm-bg-white {
+  background-color: #FFFFFF;
+}
+
+/* ── Card Layout ────────────────────────────── */
+.cm-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
+  border: 1px solid rgba(13, 40, 90, 0.08);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.cm-grid-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 180px;
+}
+
+/* Alternating rows */
+.cm-grid-row.reverse-row {
+  grid-template-columns: 0.7fr 1.3fr;
+}
+
+/* ── Text Columns ───────────────────────────── */
+.cm-text-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 40px;
+}
+
+.cm-tagline {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brand-green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.cm-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--brand-navy);
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.cm-intro-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--brand-dark-gray);
+  margin-bottom: 15px;
+}
+
+.cm-desc-paragraphs p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--brand-dark-gray);
+  margin-bottom: 8px;
+}
+
+.cm-desc-paragraphs p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Checklist Grids ────────────────────────── */
+.cm-checklist-title {
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-top: 18px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+}
+
+.cm-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+}
+
+.cm-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--brand-navy);
+}
+
+.cm-checklist-item i {
+  color: var(--brand-green);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+/* ── Detailed Grid layout (Quality, Sustainability, Safety) ── */
+.cm-detailed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.grid-detail-item {
+  display: flex;
+  gap: 12px;
+  background: rgba(13, 40, 90, 0.015);
+  border: 1px solid rgba(13, 40, 90, 0.05);
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-detail-item:hover {
+  transform: translateY(-2px);
+  background: rgba(13, 40, 90, 0.035);
+  box-shadow: 0 6px 15px rgba(13, 40, 90, 0.05);
+}
+
+.grid-detail-icon {
+  color: var(--brand-green);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.grid-detail-content h5 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin: 0 0 4px 0;
+}
+
+.grid-detail-content p {
+  font-size: 0.74rem;
+  line-height: 1.35;
+  color: var(--brand-dark-gray);
+  margin: 0;
+}
+
+/* ── Quality Highlight Bar ───────────────────── */
+.cm-highlight-matters-bar {
+  margin-top: 15px;
+  background: rgba(13, 40, 90, 0.02);
+  border: 1px solid rgba(13, 40, 90, 0.06);
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.matters-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--brand-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.matters-bullets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 15px;
+}
+
+.matters-bullets span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+}
+
+.matters-bullets span i {
+  color: var(--brand-green);
+  font-size: 0.85rem;
+}
+
+/* ── Alert Boxes ────────────────────────────── */
+.cm-sustainability-alert-box,
+.cm-safety-alert-box {
+  display: flex;
+  gap: 12px;
+  background: rgba(13, 40, 90, 0.02);
+  border: 1px solid rgba(13, 40, 90, 0.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-top: 15px;
+}
+
+.cm-sustainability-alert-box .alert-icon {
+  color: var(--brand-green);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.cm-safety-alert-box .alert-icon {
+  color: var(--brand-navy);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.cm-sustainability-alert-box .alert-text,
+.cm-safety-alert-box .alert-text {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--brand-navy);
+  margin: 0;
+}
+
+/* ── Footer Note ────────────────────────────── */
+.cm-footer-note {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--brand-navy);
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(13, 40, 90, 0.08);
+  padding-top: 12px;
+}
+
+/* ── Image Column Settings ──────────────────── */
+.cm-image-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.cm-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cm-image-fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cm-image-fade.fade-to-left {
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+}
+
+.cm-image-fade.fade-to-right {
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+}
+
+/* ── FAQ Section ────────────────────────────── */
+.cm-faq-section {
+  padding: 90px 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(13, 40, 90, 0.07);
+}
+
+/* ── Responsive Styling (max-width: 1024px) ── */
+@media (max-width: 1024px) {
+  .cm-section,
+  .cm-faq-section {
+    padding: 40px 0;
+  }
+
+  .cm-grid-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cm-text-card {
+    padding: 35px 30px;
+  }
+
+  .cm-image-card {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  /* Force vertical placement: image on top, content below */
+  .reverse-row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/* ── Responsive Styling (max-width: 768px) ── */
+@media (max-width: 768px) {
+  .cm-checklist-grid,
+  .cm-detailed-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .cm-highlight-matters-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* ── Responsive Styling (max-width: 480px) ── */
+@media (max-width: 480px) {
+  .cm-text-card {
+    padding: 24px 20px;
+  }
+
+  .cm-image-card {
+    height: 220px;
+    min-height: 220px;
+  }
+}

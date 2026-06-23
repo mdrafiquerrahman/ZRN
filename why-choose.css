@@ -69,31 +69,36 @@
   box-sizing: border-box;
 }
 
-/* ── Expectations 3-Column Block (Section 1) ──────── */
-.partner-three-col-grid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.85fr 1fr;
-  gap: 30px;
+/* ── Section 1: More Than Solar Installation ──── */
+.partner-card {
   background: #FFFFFF;
   border-radius: 24px;
   box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
   border: 1px solid rgba(13, 40, 90, 0.08);
-  padding: 40px;
-  align-items: stretch;
+  overflow: hidden;
   box-sizing: border-box;
+}
+
+.partner-top-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 180px;
 }
 
 .partner-text-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 24px 32px;
 }
 
 .partner-header-wrapper {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .partner-number-badge {
@@ -126,7 +131,7 @@
 }
 
 .partner-title {
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--brand-navy);
   line-height: 1.25;
@@ -134,24 +139,23 @@
 }
 
 .partner-desc-paragraphs p {
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+  line-height: 1.5;
   color: var(--brand-dark-gray);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .partner-desc-paragraphs p:last-child {
   margin-bottom: 0;
 }
 
+/* Right: Image column with fade overlay */
 .partner-image-card {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  min-height: 180px;
   overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .partner-image-card img {
@@ -159,30 +163,30 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 18px;
 }
 
-.partner-expect-card {
-  background: rgba(13, 40, 90, 0.02);
-  border: 1px solid rgba(13, 40, 90, 0.05);
-  border-radius: 18px;
-  padding: 35px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.partner-image-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+  pointer-events: none;
 }
 
 .partner-expect-title {
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--brand-navy);
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
 }
 
 .partner-expect-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px 20px;
+  gap: 10px 20px;
 }
 
 .expect-list-item {
@@ -196,42 +200,39 @@
 
 .expect-list-item i {
   color: var(--brand-green);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   flex-shrink: 0;
 }
 
-/* ── Split Card Reverse Layout (Section 5) ──────── */
-@media (min-width: 1025px) {
-  .about-split-card.reverse {
-    grid-template-columns: 1fr 1.2fr;
-  }
-}
-
-/* ── Section 2: Affordable Solar Solutions with Maximum Value ──────── */
-.affordable-three-col-grid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.85fr 1fr;
-  gap: 30px;
+.affordable-card {
   background: #FFFFFF;
   border-radius: 24px;
   box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
   border: 1px solid rgba(13, 40, 90, 0.08);
-  padding: 40px;
-  align-items: stretch;
+  overflow: hidden;
   box-sizing: border-box;
+}
+
+.affordable-top-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 180px;
 }
 
 .affordable-text-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 24px 32px;
 }
 
 .affordable-header-wrapper {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .affordable-title-area {
@@ -249,7 +250,7 @@
 }
 
 .affordable-title {
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--brand-navy);
   line-height: 1.25;
@@ -257,10 +258,10 @@
 }
 
 .affordable-desc-paragraphs p {
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+  line-height: 1.5;
   color: var(--brand-dark-gray);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .affordable-desc-paragraphs p:last-child {
@@ -268,13 +269,11 @@
 }
 
 .affordable-image-card {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  min-height: 180px;
   overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .affordable-image-card img {
@@ -282,30 +281,30 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 18px;
 }
 
-.affordable-benefits-card {
-  background: rgba(13, 40, 90, 0.02);
-  border: 1px solid rgba(13, 40, 90, 0.05);
-  border-radius: 18px;
-  padding: 35px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.affordable-image-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+  pointer-events: none;
 }
 
 .affordable-benefits-title {
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--brand-navy);
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
 }
 
 .affordable-benefits-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px 20px;
+  gap: 10px 20px;
 }
 
 .benefit-list-item {
@@ -328,37 +327,41 @@
   line-height: 1.45;
   color: var(--brand-navy);
   font-weight: 700;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 0;
   border-top: 1px solid rgba(13, 40, 90, 0.08);
-  padding-top: 15px;
+  padding-top: 12px;
 }
 
-/* ── Section 3: Premium Quality Components ────────── */
-.components-three-col-grid {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr 1.85fr;
-  gap: 30px;
+.components-card {
   background: #FFFFFF;
   border-radius: 24px;
   box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
   border: 1px solid rgba(13, 40, 90, 0.08);
-  padding: 40px;
-  align-items: stretch;
+  overflow: hidden;
   box-sizing: border-box;
+}
+
+.components-top-row {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 180px;
 }
 
 .components-text-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 24px 32px;
 }
 
 .components-header-wrapper {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .components-title-area {
@@ -376,7 +379,7 @@
 }
 
 .components-title {
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--brand-navy);
   line-height: 1.25;
@@ -384,10 +387,10 @@
 }
 
 .components-desc-paragraphs p {
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+  line-height: 1.5;
   color: var(--brand-dark-gray);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .components-desc-paragraphs p:last-child {
@@ -395,13 +398,11 @@
 }
 
 .components-image-card {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  min-height: 180px;
   overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .components-image-card img {
@@ -409,63 +410,68 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 18px;
 }
 
-.components-qa-card {
-  background: rgba(46, 125, 50, 0.02);
-  border: 1px solid rgba(46, 125, 50, 0.05);
-  border-radius: 18px;
-  padding: 35px 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.components-image-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+  pointer-events: none;
 }
 
 .components-qa-title {
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--brand-navy);
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
 }
 
 .components-qa-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 16px;
 }
 
 .qa-item-card {
-  background: #FFFFFF;
-  border: 1px solid rgba(46, 125, 50, 0.08);
+  background: rgba(13, 40, 90, 0.015);
+  border: 1px solid rgba(13, 40, 90, 0.05);
   border-radius: 12px;
-  padding: 16px 12px;
-  text-align: center;
+  padding: 12px 16px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 12px;
   height: 100%;
   box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .qa-item-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(46, 125, 50, 0.08);
+  transform: translateY(-2px);
+  background: rgba(13, 40, 90, 0.03);
+  box-shadow: 0 6px 15px rgba(13, 40, 90, 0.05);
+}
+
+.qa-item-card:last-child {
+  grid-column: span 2;
 }
 
 .qa-item-icon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 2px solid var(--brand-navy);
   color: var(--brand-navy);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  margin-bottom: 12px;
+  font-size: 1rem;
   background: #FFFFFF;
+  flex-shrink: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -474,18 +480,23 @@
   color: #FFFFFF;
 }
 
+.qa-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .qa-item-card h5 {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--brand-navy);
-  margin-bottom: 8px;
+  margin: 0 0 2px 0;
   line-height: 1.3;
 }
 
 .qa-item-card p {
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   color: var(--brand-dark-gray);
-  line-height: 1.4;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -632,35 +643,48 @@
   margin: 0;
 }
 
-.badge-navy { background: var(--brand-navy); }
-.badge-green { background: var(--brand-green); }
-.badge-orange { background: var(--brand-orange); }
+.badge-navy {
+  background: var(--brand-navy);
+}
+
+.badge-green {
+  background: var(--brand-green);
+}
+
+.badge-orange {
+  background: var(--brand-orange);
+}
 
 /* ── Section 5: Experienced Professionals You Can Trust ──────── */
-.professionals-two-col-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 30px;
+.professionals-card {
   background: #FFFFFF;
   border-radius: 24px;
   box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
   border: 1px solid rgba(13, 40, 90, 0.08);
-  padding: 40px;
-  align-items: stretch;
+  overflow: hidden;
   box-sizing: border-box;
+}
+
+.professionals-top-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 180px;
 }
 
 .professionals-text-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 24px 32px;
 }
 
 .professionals-header-wrapper {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .professionals-title-area {
@@ -678,7 +702,7 @@
 }
 
 .professionals-title {
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--brand-navy);
   line-height: 1.25;
@@ -686,35 +710,30 @@
 }
 
 .professionals-desc-paragraphs p {
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+  line-height: 1.5;
   color: var(--brand-dark-gray);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .professionals-desc-paragraphs p:last-child {
   margin-bottom: 0;
 }
 
-.professionals-helps-block {
-  margin-top: 25px;
-  border-top: 1px solid rgba(13, 40, 90, 0.08);
-  padding-top: 20px;
-}
-
 .professionals-helps-title {
-  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--brand-green);
+  color: var(--brand-navy);
+  margin-top: 20px;
+  margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
 }
 
 .professionals-helps-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 20px;
+  gap: 10px 20px;
 }
 
 .helps-item {
@@ -726,6 +745,10 @@
   color: var(--brand-navy);
 }
 
+.helps-item:last-child {
+  grid-column: span 2;
+}
+
 .helps-item i {
   color: var(--brand-navy);
   font-size: 1rem;
@@ -733,13 +756,11 @@
 }
 
 .professionals-image-card {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  min-height: 180px;
   overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .professionals-image-card img {
@@ -747,7 +768,14 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 18px;
+}
+
+.professionals-image-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+  pointer-events: none;
 }
 
 /* ── Section 6: A Hassle-Free Solar Journey ────────── */
@@ -868,24 +896,28 @@
   margin-top: -65px;
 }
 
-/* ── Section 7: Assistance with PM Surya Ghar: Muft Yojana ────── */
-.subsidy-two-col-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 30px;
+.subsidy-card {
   background: #FFFFFF;
   border-radius: 24px;
   box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
   border: 1px solid rgba(13, 40, 90, 0.08);
-  padding: 40px;
-  align-items: stretch;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
-.subsidy-content-card {
+.subsidy-top-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 180px;
+}
+
+.subsidy-text-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 24px 32px;
 }
 
 .subsidy-subtitle {
@@ -899,43 +931,38 @@
 }
 
 .subsidy-title {
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--brand-navy);
   line-height: 1.25;
-  margin: 0 0 15px;
+  margin: 0 0 12px;
 }
 
 .subsidy-desc-paragraphs p {
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+  line-height: 1.5;
   color: var(--brand-dark-gray);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .subsidy-desc-paragraphs p:last-child {
   margin-bottom: 0;
 }
 
-.subsidy-support-block {
-  margin-top: 25px;
-  border-top: 1px solid rgba(13, 40, 90, 0.08);
-  padding-top: 20px;
-}
-
 .subsidy-support-title {
-  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--brand-green);
+  color: var(--brand-navy);
+  margin-top: 20px;
+  margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
 }
 
 .subsidy-support-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 20px;
+  gap: 10px 20px;
 }
 
 .support-list-item {
@@ -954,44 +981,42 @@
 }
 
 .subsidy-disclaimer-box {
-  margin-top: 25px;
+  margin-top: 20px;
   background: rgba(13, 40, 90, 0.02);
   border: 1px solid rgba(13, 40, 90, 0.06);
   border-radius: 12px;
-  padding: 16px 20px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .disclaimer-icon {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: rgba(13, 40, 90, 0.05);
   color: var(--brand-navy);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   flex-shrink: 0;
 }
 
 .disclaimer-text {
-  font-size: 0.76rem;
-  line-height: 1.45;
+  font-size: 0.72rem;
+  line-height: 1.4;
   color: var(--brand-navy);
   margin: 0;
 }
 
 .subsidy-image-card {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  min-height: 180px;
   overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .subsidy-image-card img {
@@ -999,27 +1024,38 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 18px;
 }
 
-/* ── Section 8: Commitment to Safety and Reliability ────────── */
-.safety-two-col-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 30px;
+.subsidy-image-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+  pointer-events: none;
+}
+
+.safety-card {
   background: #FFFFFF;
   border-radius: 24px;
   box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
   border: 1px solid rgba(13, 40, 90, 0.08);
-  padding: 40px;
-  align-items: stretch;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
-.safety-content-card {
+.safety-top-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 180px;
+}
+
+.safety-text-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 24px 32px;
 }
 
 .safety-subtitle {
@@ -1033,43 +1069,38 @@
 }
 
 .safety-title {
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: var(--brand-navy);
   line-height: 1.25;
-  margin: 0 0 15px;
+  margin: 0 0 12px;
 }
 
 .safety-desc-paragraphs p {
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+  line-height: 1.5;
   color: var(--brand-dark-gray);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .safety-desc-paragraphs p:last-child {
   margin-bottom: 0;
 }
 
-.safety-support-block {
-  margin-top: 25px;
-  border-top: 1px solid rgba(13, 40, 90, 0.08);
-  padding-top: 20px;
-}
-
 .safety-support-title {
-  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--brand-green);
+  color: var(--brand-navy);
+  margin-top: 20px;
+  margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
 }
 
 .safety-support-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 20px;
+  gap: 10px 20px;
 }
 
 .safety-list-item {
@@ -1097,13 +1128,11 @@
 }
 
 .safety-image-card {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  min-height: 180px;
   overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .safety-image-card img {
@@ -1111,7 +1140,14 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 18px;
+}
+
+.safety-image-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+  pointer-events: none;
 }
 
 /* ── Section 9: CTA Difference Banner ───────────────────────── */
@@ -1253,6 +1289,7 @@
 
 /* ── Viewport compression overrides for desktop ──────────────── */
 @media (min-width: 1025px) {
+
   /* Match layout standard header spacing override */
   .solutions-detail-header {
     margin-bottom: 20px;
@@ -1261,6 +1298,7 @@
 
 /* ── Responsive styling for tablets and smaller viewports ──────────────── */
 @media (max-width: 1024px) {
+
   .partner-section,
   .affordable-section,
   .components-section,
@@ -1273,17 +1311,23 @@
     padding: 60px 0;
   }
 
-  /* Make Section 1, 2, 3 and Section 4, 5, 7, 8 collapse to vertical */
-  .partner-three-col-grid,
-  .affordable-three-col-grid,
-  .components-three-col-grid,
-  .customized-two-col-layout,
-  .professionals-two-col-grid,
-  .subsidy-two-col-grid,
-  .safety-two-col-grid {
+  /* Make Section 1, Section 2, Section 3, Section 5, Section 7, and Section 8 collapse to vertical */
+  .partner-top-row,
+  .affordable-top-row,
+  .components-top-row,
+  .professionals-top-row,
+  .subsidy-top-row,
+  .safety-top-row {
     grid-template-columns: 1fr;
-    padding: 30px 24px;
-    gap: 30px;
+  }
+
+  .partner-text-card,
+  .affordable-text-card,
+  .components-text-card,
+  .professionals-text-card,
+  .subsidy-text-card,
+  .safety-text-card {
+    padding: 32px 28px 24px;
   }
 
   .partner-image-card,
@@ -1292,12 +1336,20 @@
   .professionals-image-card,
   .subsidy-image-card,
   .safety-image-card {
-    height: 300px;
+    height: 280px;
+    min-height: 280px;
   }
 
+  .partner-expect-list,
   .affordable-benefits-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 14px 20px;
+  }
+
+  .customized-two-col-layout {
+    grid-template-columns: 1fr;
+    padding: 30px 24px;
+    gap: 30px;
   }
 
   .components-qa-list {
@@ -1338,6 +1390,7 @@
 
 /* ── Responsive styling for mobile viewports ──────────────── */
 @media (max-width: 768px) {
+
   .expect-grid,
   .expect-grid-simple,
   .partner-expect-list,
@@ -1349,6 +1402,19 @@
   .safety-support-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .partner-expect-list,
+  .affordable-benefits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .qa-item-card:last-child {
+    grid-column: span 1;
+  }
+
+  .helps-item:last-child {
+    grid-column: span 1;
   }
 
   .partner-title,
@@ -1387,6 +1453,7 @@
 }
 
 @media (max-width: 576px) {
+
   .partner-section,
   .affordable-section,
   .components-section,

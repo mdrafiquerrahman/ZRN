@@ -1,0 +1,593 @@
+/* =============================================
+   OUR PROCESS — PAGE-SPECIFIC STYLES
+   (Design tokens inherited from styles.css)
+   ============================================= */
+
+/* ── Hero Section ───────────────────────────── */
+.process-hero-breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: rgba(13, 40, 90, 0.6);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.process-hero-breadcrumb a {
+  color: rgba(13, 40, 90, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.process-hero-breadcrumb a:hover {
+  color: var(--brand-green);
+}
+
+.process-hero-breadcrumb span {
+  color: var(--brand-green);
+  font-weight: 700;
+}
+
+.process-hero-breadcrumb i {
+  font-size: 0.7rem;
+  color: rgba(13, 40, 90, 0.4);
+}
+
+/* ── Global Section Background Alternations ── */
+.process-why-section,
+.step-survey-section,
+.step-install-section,
+.process-subsidy-section {
+  padding: 90px 0;
+  background-color: var(--brand-light-gray);
+  border-top: 1px solid rgba(13, 40, 90, 0.07);
+  box-sizing: border-box;
+}
+
+.step-consultation-section,
+.step-design-section,
+.step-support-section,
+.process-different-section,
+.why-choose-faq-section {
+  padding: 90px 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(13, 40, 90, 0.07);
+  box-sizing: border-box;
+}
+
+/* ── Card Container Structure ───────────────── */
+.process-why-card,
+.step-card,
+.process-subsidy-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
+  border: 1px solid rgba(13, 40, 90, 0.08);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.process-why-top-row,
+.step-top-row,
+.process-subsidy-top-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 180px;
+}
+
+/* Alternating layout (image left, text right) */
+.process-why-top-row.reverse-row,
+.step-top-row.reverse-row,
+.process-subsidy-top-row.reverse-row {
+  grid-template-columns: 0.7fr 1.3fr;
+}
+
+/* ── Text Column Cards ──────────────────────── */
+.process-why-text-card,
+.step-text-card,
+.process-subsidy-text-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 40px;
+}
+
+.process-why-tagline,
+.step-badge-tag,
+.process-subsidy-tagline {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brand-green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.process-why-title,
+.step-card-title,
+.process-subsidy-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--brand-navy);
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.process-why-desc-paragraphs p,
+.step-desc-paragraphs p,
+.process-subsidy-desc-paragraphs p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--brand-dark-gray);
+  margin-bottom: 8px;
+}
+
+.process-why-desc-paragraphs p:last-child,
+.step-desc-paragraphs p:last-child,
+.process-subsidy-desc-paragraphs p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Checklists ─────────────────────────────── */
+.process-why-benefits-title,
+.details-section-title,
+.process-subsidy-checklist-title {
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-top: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+}
+
+.process-why-benefits-list,
+.process-subsidy-checklist,
+.step-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+}
+
+.benefit-item,
+.support-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--brand-navy);
+}
+
+.benefit-item i,
+.support-list-item i {
+  color: var(--brand-green);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.process-why-footer-note,
+.step-footer-paragraph {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--brand-navy);
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(13, 40, 90, 0.08);
+  padding-top: 12px;
+}
+
+/* Step sub-details grid for step pages */
+.step-details-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.details-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.details-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--brand-navy);
+}
+
+.details-check-item i {
+  color: var(--brand-green);
+  font-size: 0.95rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.details-check-item strong {
+  color: var(--brand-navy);
+  font-weight: 700;
+}
+
+.support-explanation {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--brand-dark-gray);
+  margin-bottom: 10px;
+}
+
+/* ── Image Column Cards ─────────────────────── */
+.process-why-image-card,
+.step-image-card,
+.process-subsidy-image-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.process-why-image-card img,
+.step-image-card img,
+.process-subsidy-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fades */
+.process-why-image-fade,
+.process-subsidy-image-fade,
+.step-image-fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Default fade: white on the left (for images on the right) */
+.process-why-image-fade,
+.step-image-fade.fade-to-left {
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+}
+
+/* Reverse fade: white on the right (for images on the left) */
+.process-subsidy-image-fade,
+.step-image-fade.fade-to-right {
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 25%);
+}
+
+/* ── Section 3: Site Survey Assess Grid ────── */
+.assess-features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.assess-feature-card {
+  background: rgba(13, 40, 90, 0.015);
+  border: 1px solid rgba(13, 40, 90, 0.05);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.assess-feature-card:hover {
+  transform: translateY(-2px);
+  background: rgba(13, 40, 90, 0.03);
+  box-shadow: 0 6px 15px rgba(13, 40, 90, 0.05);
+}
+
+.assess-feature-card:last-child {
+  grid-column: span 1;
+}
+
+.assess-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--brand-navy);
+  color: var(--brand-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  background: #FFFFFF;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.assess-feature-card:hover .assess-icon-wrap {
+  background-color: var(--brand-navy);
+  color: #FFFFFF;
+}
+
+.assess-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.assess-feature-card h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin: 0 0 2px 0;
+  line-height: 1.3;
+}
+
+.assess-feature-card p {
+  font-size: 0.7rem;
+  color: var(--brand-dark-gray);
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* ── Section 7: PM Surya Ghar Disclaimer ──────── */
+.process-subsidy-disclaimer {
+  margin-top: 20px;
+  background: rgba(13, 40, 90, 0.02);
+  border: 1px solid rgba(13, 40, 90, 0.06);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.process-subsidy-disclaimer .disclaimer-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(13, 40, 90, 0.05);
+  color: var(--brand-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.process-subsidy-disclaimer .disclaimer-text {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--brand-navy);
+  margin: 0;
+}
+
+/* ── Section 8: What Makes Us Different Grid ── */
+.different-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.different-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(13, 40, 90, 0.08);
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(13, 40, 90, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.different-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-green);
+  box-shadow: 0 10px 25px rgba(13, 40, 90, 0.06);
+}
+
+.different-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(13, 40, 90, 0.02);
+  color: var(--brand-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  border: 1px solid rgba(13, 40, 90, 0.06);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.different-card:hover .different-icon {
+  background-color: var(--brand-green);
+  color: #FFFFFF;
+}
+
+.different-card h5 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 8px;
+}
+
+.different-card p {
+  font-size: 0.74rem;
+  color: var(--brand-dark-gray);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ── FAQs and Accordion Styles ──────────────── */
+.faq-section {
+  padding: 90px 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(13, 40, 90, 0.07);
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(13, 40, 90, 0.06);
+  padding: 18px 10px;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--brand-navy);
+  gap: 15px;
+}
+
+.faq-toggle {
+  color: var(--brand-green);
+  font-size: 0.9rem;
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--brand-dark-gray);
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(180deg);
+}
+
+/* ── Responsive Styling (max-width: 1024px) ── */
+@media (max-width: 1024px) {
+  
+  .process-why-section,
+  .step-consultation-section,
+  .step-survey-section,
+  .step-design-section,
+  .step-install-section,
+  .step-support-section,
+  .process-subsidy-section,
+  .process-different-section,
+  .why-choose-faq-section {
+    padding: 60px 0;
+  }
+
+  .process-why-top-row,
+  .step-top-row,
+  .process-subsidy-top-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .process-why-text-card,
+  .step-text-card,
+  .process-subsidy-text-card {
+    padding: 32px 28px 24px;
+  }
+
+  .process-why-image-card,
+  .step-image-card,
+  .process-subsidy-image-card {
+    height: 280px;
+    min-height: 280px;
+  }
+
+  /* Force image position above text on collapse if needed, or default layout flow */
+  .reverse-row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .step-details-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .different-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Responsive Styling (max-width: 768px) ── */
+@media (max-width: 768px) {
+  
+  .process-why-benefits-list,
+  .process-subsidy-checklist,
+  .step-benefits-grid,
+  .assess-features-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .assess-feature-card:last-child {
+    grid-column: span 1;
+  }
+
+  .different-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* ── Responsive Styling (max-width: 480px) ── */
+@media (max-width: 480px) {
+  
+  .different-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-why-text-card,
+  .step-text-card,
+  .process-subsidy-text-card {
+    padding: 24px 20px;
+  }
+
+  .process-why-image-card,
+  .step-image-card,
+  .process-subsidy-image-card {
+    height: 220px;
+    min-height: 220px;
+  }
+}
