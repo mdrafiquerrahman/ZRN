@@ -1,0 +1,857 @@
+/* =============================================
+   SOLUTIONS PAGE — PAGE-SPECIFIC STYLES
+   (Design tokens inherited from styles.css)
+   ============================================= */
+
+/* ── Breadcrumb for Page Hero ───────────────── */
+.solutions-hero-breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: rgba(13, 40, 90, 0.6);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.solutions-hero-breadcrumb a {
+  color: rgba(13, 40, 90, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.solutions-hero-breadcrumb a:hover {
+  color: var(--brand-green);
+}
+
+.solutions-hero-breadcrumb span {
+  color: var(--brand-green);
+  font-weight: 700;
+}
+
+.solutions-hero-breadcrumb i {
+  font-size: 0.7rem;
+  color: rgba(13, 40, 90, 0.4);
+}
+
+/* ── Solutions Details Section ──────────────── */
+.solutions-detail-section {
+  padding: 90px 0;
+  background-color: var(--brand-light-gray);
+  border-top: 1px solid rgba(13, 40, 90, 0.07);
+}
+
+/* ── CTA Bar Section ─────────────────────────── */
+.solutions-cta-section {
+  padding: 90px 0;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(13, 40, 90, 0.07);
+}
+
+/* ── FAQ Section ─────────────────────────────── */
+.solutions-faq-section {
+  padding: 90px 0;
+  background: var(--brand-light-gray);
+  border-top: 1px solid rgba(13, 40, 90, 0.07);
+  border-bottom: 1px solid rgba(13, 40, 90, 0.07);
+}
+
+
+.solutions-detail-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.solutions-detail-header .section-subtitle-green {
+  color: var(--brand-green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.solutions-detail-header h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--brand-navy);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.solutions-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Alternating layout card style */
+.solution-detail-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-areas: "media info";
+  background: #FFFFFF;
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
+  align-items: start;
+  padding: 30px;
+  gap: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(13, 40, 90, 0.08);
+}
+
+.solution-detail-card.reverse {
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-areas: "info media";
+}
+
+.solution-media-side {
+  grid-area: media;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.solution-image-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  height: 280px;
+}
+
+.solution-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.solution-detail-card:hover .solution-image-container img {
+  transform: scale(1.03);
+}
+
+.solution-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 55%, #FFFFFF 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 75%, #FFFFFF 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Badge number over image */
+.solution-badge-num {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--brand-navy);
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 800;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(13, 40, 90, 0.3);
+}
+
+.solution-info-side {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.solution-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.badge-navy {
+  background: var(--brand-navy);
+}
+
+.badge-green {
+  background: var(--brand-green);
+}
+
+.badge-orange {
+  background: var(--brand-orange);
+}
+
+.solution-detail-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--brand-navy);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.solution-detail-subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.solution-paragraphs {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--brand-dark-gray);
+  margin-bottom: 24px;
+}
+
+.solution-paragraphs p {
+  margin-bottom: 14px;
+}
+
+.solution-paragraphs p:last-child {
+  margin-bottom: 0;
+}
+
+/* Bullet list and column styles */
+.solution-block-title {
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: var(--brand-green);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+/* Force both sub-column titles to occupy identical height so their lists align */
+.solution-extra-grids .solution-block-title {
+  height: 2.8rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-bottom: 16px;
+}
+
+.solution-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.solution-bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--brand-navy);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.solution-bullet-list li i {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Green checks */
+.solution-bullet-list.green-checks li i {
+  color: var(--brand-green);
+}
+
+/* Blue icons & Circular icons shared styles */
+.solution-bullet-list.blue-icons,
+.solution-bullet-list.circle-icons {
+  gap: 10px;
+}
+
+.solution-bullet-list.blue-icons li,
+.solution-bullet-list.circle-icons li {
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.solution-bullet-list.blue-icons li i,
+.solution-bullet-list.circle-icons li i {
+  color: var(--brand-navy);
+  border: 1.5px solid rgba(13, 40, 90, 0.22);
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.solution-extra-grids {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Both blocks get same top padding so titles align at the same height */
+.solution-ideal-block,
+.solution-why-zrn-block {
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.solution-ideal-block {
+  background: rgba(13, 40, 90, 0.012);
+  border: 1px solid rgba(13, 40, 90, 0.04);
+}
+
+.solution-why-zrn-block {
+  background: rgba(13, 40, 90, 0.03);
+  border: 1px solid rgba(13, 40, 90, 0.07);
+}
+
+/* Responsive adjustment for solutions detail card */
+@media (max-width: 1024px) {
+  .solutions-detail-section,
+  .investment-section,
+  .customized-section,
+  .services-process-section {
+    padding: 60px 0;
+  }
+
+  .solutions-detail-header {
+    margin-bottom: 40px;
+  }
+
+  .solution-detail-card,
+  .solution-detail-card.reverse {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "media"
+      "info";
+    gap: 30px;
+    padding: 24px;
+  }
+
+  .solution-image-container {
+    height: 320px;
+  }
+
+  .solution-extra-grids {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .solutions-detail-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .solution-detail-title {
+    font-size: 1.4rem;
+  }
+
+  .solution-detail-card {
+    padding: 16px;
+  }
+
+  .solution-image-container {
+    height: 200px;
+  }
+
+  .solution-why-zrn-block {
+    padding: 16px;
+  }
+}
+
+/* ── Viewport compression overrides for desktop screen heights ──────────────── */
+@media (min-width: 1025px) {
+
+  /* Restore standard padding to match home/about page */
+  .solutions-detail-section,
+  .investment-section,
+  .customized-section,
+  .services-process-section {
+    padding: 90px 0 !important;
+  }
+
+  /* Make section header much more compact */
+  .solutions-detail-header {
+    margin-bottom: 20px;
+  }
+
+  .solutions-detail-header h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Shrink padding and gap on the featured card */
+  .solution-detail-card.featured {
+    padding: 20px 24px;
+    gap: 16px;
+  }
+
+  /* Reduce image container height further */
+  .solution-detail-card.featured .solution-image-container {
+    height: 180px;
+  }
+
+  /* Make text headers and paragraphs extremely compact */
+  .solution-detail-card.featured .solution-detail-title {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+  }
+
+  .solution-detail-card.featured .solution-detail-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .solution-detail-card.featured .solution-paragraphs {
+    margin-bottom: 8px;
+  }
+
+  .solution-detail-card.featured .solution-paragraphs p {
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  /* Adjust bullet lists and blocks for tight spacing */
+  .solution-detail-card.featured .solution-block-title {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .solution-detail-card.featured .solution-extra-grids .solution-block-title {
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .solution-detail-card.featured .solution-bullet-list {
+    gap: 6px;
+  }
+
+  .solution-detail-card.featured .solution-bullet-list li {
+    font-size: 0.8rem;
+    gap: 6px;
+    line-height: 1.3;
+  }
+
+  .solution-detail-card.featured .solution-bullet-list li i {
+    font-size: 0.9rem;
+  }
+
+  /* Shrink ideal for / why choose block padding */
+  .solution-detail-card.featured .solution-ideal-block,
+  .solution-detail-card.featured .solution-why-zrn-block {
+    padding: 10px 14px;
+  }
+
+  /* Make the circular bullet icons more compact */
+  .solution-detail-card.featured .solution-bullet-list.blue-icons,
+  .solution-detail-card.featured .solution-bullet-list.circle-icons {
+    gap: 4px;
+  }
+
+  .solution-detail-card.featured .solution-bullet-list.blue-icons li i,
+  .solution-detail-card.featured .solution-bullet-list.circle-icons li i {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    font-size: 0.6rem;
+  }
+
+  .solution-detail-card.featured .solution-bullet-list.blue-icons li,
+  .solution-detail-card.featured .solution-bullet-list.circle-icons li {
+    gap: 6px;
+  }
+}
+
+/* ── Standard Cards Uniform Height Styling ──────────────── */
+.solution-image-side {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.solution-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.solution-text-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Enforce uniform height for non-featured cards on desktop */
+@media (min-width: 1025px) {
+  .solution-detail-card:not(.featured) {
+    height: 520px;
+    align-items: stretch;
+  }
+}
+
+/* =============================================
+   SECTION 6, 7, 8 NEW STYLES
+   ============================================= */
+
+/* ── Section Backgrounds ────────────────────────────── */
+.investment-section,
+.customized-section,
+.services-process-section {
+  background-color: var(--brand-light-gray);
+  padding: 90px 0;
+  border-top: 1px solid rgba(13, 40, 90, 0.07);
+}
+
+/* ── Section Cards (unified container cards) ───────── */
+.section-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(13, 40, 90, 0.06);
+  padding: 40px;
+  position: relative;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.section-card-badge {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 800;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(13, 40, 90, 0.3);
+}
+
+.section-card-content {
+  padding-left: 0;
+}
+
+/* ── Section 6: Smart Investment Columns ──────────── */
+.investment-columns-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.investment-column {
+  border-right: 1px solid rgba(13, 40, 90, 0.08);
+  padding-right: 15px;
+}
+
+.investment-column:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.investment-column-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.investment-column-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.investment-column h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin: 0;
+}
+
+.investment-bullet-list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.investment-bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--brand-navy);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.investment-bullet-list li i {
+  font-size: 0.55rem;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.financial-list li i {
+  color: var(--brand-orange);
+}
+
+.environmental-list li i {
+  color: var(--brand-green);
+}
+
+.energy-list li i {
+  color: var(--brand-navy);
+}
+
+/* ── Section 7: Customized Solutions layout ────────── */
+.customized-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.customized-draft-image-container {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.customized-draft-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.customized-draft-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 65%, #FFFFFF 100%);
+  pointer-events: none;
+}
+
+/* ── Section 8: Horizontal Process Timeline ───────── */
+.process-horizontal-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.process-step-node {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-node-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid rgba(13, 40, 90, 0.15);
+  background: #FFFFFF;
+  color: var(--brand-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(13, 40, 90, 0.03);
+}
+
+.process-step-node h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 8px;
+}
+
+.process-step-node p {
+  font-size: 0.8rem;
+  color: var(--brand-dark-gray);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 150px;
+}
+
+.process-arrow {
+  color: rgba(13, 40, 90, 0.3);
+  font-size: 1.25rem;
+}
+
+/* ── Responsive overrides for Section 6, 7, 8 ──────── */
+@media (max-width: 1024px) {
+  .investment-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .investment-column {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid rgba(13, 40, 90, 0.08);
+    padding-bottom: 20px;
+  }
+  
+  .investment-column:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .customized-main-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .process-horizontal-track {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .process-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* ── Equal Height & Box Styling for Card Child Blocks ── */
+.solution-benefits-block {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(46, 125, 50, 0.015);
+  border: 1px solid rgba(46, 125, 50, 0.05);
+  box-sizing: border-box;
+}
+
+.solution-card-logo-wrapper {
+  margin-top: auto;
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.solution-card-logo-crop {
+  width: 32px;
+  height: 25px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.25;
+  transition: opacity 0.3s ease;
+}
+
+.solution-card-logo-crop img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+
+.solution-why-zrn-block:hover .solution-card-logo-crop {
+  opacity: 0.65;
+}
+
+@media (min-width: 1025px) {
+  /* Make sure benefits block and extra grids stretch to full height of row 2 */
+  .solution-detail-card.featured .solution-benefits-block,
+  .solution-detail-card.featured .solution-extra-grids {
+    align-self: stretch;
+    height: 100%;
+  }
+
+  /* Make sure the extra grids layout stretches its children */
+  .solution-extra-grids {
+    align-items: stretch;
+    height: 100%;
+  }
+
+  /* Force boxes to have height 100% so they fill the grid heights */
+  .solution-benefits-block,
+  .solution-ideal-block,
+  .solution-why-zrn-block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  .solution-bullet-list {
+    flex-grow: 1;
+  }
+  
+  .solution-why-zrn-block p {
+    flex-grow: 1;
+  }
+
+  /* For Section 6 (Smart Investment): stretch image container, narrow image column, adjust font size */
+  #smart-investment .solution-detail-card.featured {
+    grid-template-columns: 0.55fr 1.45fr;
+    align-items: stretch;
+  }
+  
+  #smart-investment .solution-image-container {
+    height: 100% !important;
+    align-self: stretch;
+  }
+
+  #smart-investment .solution-image-container::after {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 65%, #FFFFFF 100%);
+  }
+
+  #smart-investment .investment-bullet-list li {
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+}
