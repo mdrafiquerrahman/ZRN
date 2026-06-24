@@ -179,18 +179,21 @@ ul {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--brand-light-gray);
-  border-bottom: 1px solid rgba(13, 40, 90, 0.1);
+  background: rgba(242, 244, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(13, 40, 90, 0.08);
   transition: var(--transition-smooth);
 }
 
 .site-header.scrolled {
-  background: var(--brand-light-gray);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: rgba(242, 244, 247, 0.94);
+  box-shadow: 0 10px 30px rgba(13, 40, 90, 0.05);
+  border-bottom-color: rgba(13, 40, 90, 0.06);
 }
 
 .navbar-container {
-  background: var(--brand-light-gray);
+  background: transparent;
 }
 
 .main-nav {
@@ -244,10 +247,12 @@ ul {
 
 .nav-link {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.4px;
   position: relative;
-  padding: 10px 0;
+  padding: 8px 0;
   color: var(--brand-navy);
+  transition: var(--transition-smooth);
 }
 
 .nav-link:hover,
@@ -255,20 +260,24 @@ ul {
   color: var(--brand-orange);
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background-color: var(--brand-orange);
-  transition: var(--transition-smooth);
-}
+@media (min-width: 1025px) {
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2.5px;
+    background-color: var(--brand-orange);
+    border-radius: 2px;
+    transition: var(--transition-smooth);
+    transform: translateX(-50%);
+  }
 
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
 }
 
 
@@ -403,9 +412,9 @@ ul {
 /* Hero Section */
 .hero {
   position: relative;
-  height: calc(100vh - 180px);
-  min-height: 480px;
-  padding: 10px 0 10px;
+  height: auto;
+  min-height: 520px;
+  padding: 60px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -415,6 +424,45 @@ ul {
   overflow: hidden;
   box-sizing: border-box;
 }
+
+/* Shared Hero Breadcrumb Styles */
+.hero-breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: rgba(13, 40, 90, 0.6);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero-breadcrumb a {
+  color: rgba(13, 40, 90, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.hero-breadcrumb a:hover {
+  color: var(--brand-green);
+}
+
+.hero-breadcrumb span {
+  color: var(--brand-green);
+  font-weight: 700;
+}
+
+.hero-breadcrumb i {
+  font-size: 0.7rem;
+  color: rgba(13, 40, 90, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .hero-breadcrumb {
+    justify-content: center;
+  }
+}
+
 
 .hero-container {
   display: grid;
@@ -758,6 +806,28 @@ ul {
   color: var(--brand-orange);
 }
 
+/* Floating Badge Container */
+.floating-badge-container {
+  position: fixed;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+  align-items: flex-end;
+}
+
+/* Reset default positioning of badges inside the container */
+.floating-badge-container .whatsapp-float-badge,
+.floating-badge-container .quote-float-badge {
+  position: static;
+  transform: none;
+  top: auto;
+  right: auto;
+}
+
 /* Green WhatsApp Floating Badge */
 .whatsapp-float-badge {
   position: fixed;
@@ -789,6 +859,40 @@ ul {
 }
 
 .whatsapp-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Orange Quote Floating Badge */
+.quote-float-badge {
+  background-color: var(--brand-orange);
+  color: #FFFFFF;
+  padding: 15px 10px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  box-shadow: -2px 5px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.quote-float-badge:hover {
+  background-color: #E59700;
+  padding-right: 15px;
+}
+
+.quote-float-icon {
+  font-size: 1.6rem;
+}
+
+.quote-float-text {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 0.75rem;
@@ -1043,17 +1147,17 @@ ul {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 290px;
     height: 100vh;
-    background: rgba(242, 244, 247, 0.98);
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-left: 1px solid rgba(13, 40, 90, 0.1);
+    border-left: 1px solid rgba(13, 40, 90, 0.08);
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    padding: 100px 30px 40px;
-    gap: 20px;
+    align-items: flex-start;
+    padding: 100px 25px 40px;
+    gap: 12px;
     z-index: 999;
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
@@ -1061,17 +1165,25 @@ ul {
 
   .nav-menu.open {
     right: 0;
+    box-shadow: -15px 0 45px rgba(13, 40, 90, 0.15);
   }
 
   .nav-link {
-    font-size: 1.1rem;
+    font-size: 1.02rem;
+    font-weight: 600;
     width: 100%;
-    text-align: center;
-    padding: 8px 0;
+    text-align: left;
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: var(--brand-navy);
+    transition: var(--transition-smooth);
   }
 
-  .nav-link::after {
-    bottom: 0;
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: rgba(13, 40, 90, 0.05);
+    color: var(--brand-orange);
+    padding-left: 24px;
   }
 
 
@@ -3112,7 +3224,57 @@ ul {
     font-size: 1.75rem;
   }
   
-  /* WhatsApp float badge transform to mobile friendly circular button */
+  /* Mobile styles for floating badge container */
+  .floating-badge-container {
+    top: auto !important;
+    bottom: 25px !important;
+    right: 25px !important;
+    transform: none !important;
+    flex-direction: column-reverse !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .floating-badge-container .whatsapp-float-badge,
+  .floating-badge-container .quote-float-badge {
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    right: auto !important;
+    border-radius: 50% !important;
+    width: 60px !important;
+    height: 60px !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  .floating-badge-container .whatsapp-float-badge:hover,
+  .floating-badge-container .quote-float-badge:hover {
+    padding-right: 0 !important;
+    transform: scale(1.08) !important;
+  }
+
+  .whatsapp-icon {
+    font-size: 2.2rem !important;
+  }
+
+  .whatsapp-text {
+    display: none !important;
+  }
+
+  .quote-float-icon {
+    font-size: 2.0rem !important;
+  }
+
+  .quote-float-text {
+    display: none !important;
+  }
+
+  /* Keep standalone WhatsApp float badge mobile responsive if not in container */
   .whatsapp-float-badge {
     top: auto !important;
     bottom: 25px !important;
@@ -3134,14 +3296,6 @@ ul {
   .whatsapp-float-badge:hover {
     padding-right: 0 !important;
     transform: scale(1.08) !important;
-  }
-
-  .whatsapp-icon {
-    font-size: 2.2rem !important;
-  }
-
-  .whatsapp-text {
-    display: none !important;
   }
 }
 

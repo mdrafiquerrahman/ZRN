@@ -4,36 +4,7 @@
 ============================================= */
 
 /* ── Breadcrumb for Page Hero ───────────────── */
-.about-hero-breadcrumb {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  color: rgba(13, 40, 90, 0.6);
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.about-hero-breadcrumb a {
-  color: rgba(13, 40, 90, 0.7);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.about-hero-breadcrumb a:hover {
-  color: var(--brand-green);
-}
-
-.about-hero-breadcrumb span {
-  color: var(--brand-green);
-  font-weight: 700;
-}
-
-.about-hero-breadcrumb i {
-  font-size: 0.7rem;
-  color: rgba(13, 40, 90, 0.4);
-}
+/* Breadcrumb uses shared .hero-breadcrumb in styles.css */
 
 /* ── Our Story Section ────────────────────── */
 #our-story {

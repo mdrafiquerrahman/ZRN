@@ -4,36 +4,7 @@
    ============================================= */
 
 /* ── Hero Section ───────────────────────────── */
-.process-hero-breadcrumb {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  color: rgba(13, 40, 90, 0.6);
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.process-hero-breadcrumb a {
-  color: rgba(13, 40, 90, 0.7);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.process-hero-breadcrumb a:hover {
-  color: var(--brand-green);
-}
-
-.process-hero-breadcrumb span {
-  color: var(--brand-green);
-  font-weight: 700;
-}
-
-.process-hero-breadcrumb i {
-  font-size: 0.7rem;
-  color: rgba(13, 40, 90, 0.4);
-}
+/* Breadcrumb uses shared .hero-breadcrumb in styles.css */
 
 /* ── Global Section Background Alternations ── */
 .process-why-section,

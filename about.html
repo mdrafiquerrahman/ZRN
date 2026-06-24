@@ -62,19 +62,9 @@
             <a href="process.html" class="nav-link">Our Process</a>
             <a href="pm-surya-ghar.html" class="nav-link">PM Surya Ghar</a>
             <a href="commitment.html" class="nav-link">Our Commitment</a>
+            <a href="blogs.html" class="nav-link">Blogs</a>
             <a href="contact.html" class="nav-link">Contact Us</a>
-            <a href="contact.html" class="nav-link drawer-cta">
-              Get Free Quote
-              <i class="fa-regular fa-circle-right quote-arrow-icon"></i>
-            </a>
           </nav>
-
-          <div class="cta-area">
-            <button class="btn-quote" onclick="window.location.href='contact.html'">
-              Get Free Quote
-              <i class="fa-regular fa-circle-right quote-arrow-icon"></i>
-            </button>
-          </div>
 
           <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
             <i class="hamburger-bar"></i>
@@ -89,7 +79,7 @@
   <section class="hero" id="about-hero">
     <div class="hero-container container">
       <div class="hero-content">
-        <div class="about-hero-breadcrumb">
+        <div class="hero-breadcrumb">
           <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
           <i class="fa-solid fa-chevron-right"></i>
           <span>About Us</span>
@@ -875,6 +865,7 @@
           <li><a href="process.html">Our Process</a></li>
           <li><a href="pm-surya-ghar.html">PM Surya Ghar: Muft Bijli Yojana</a></li>
           <li><a href="commitment.html">Our Commitment</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
           <li><a href="contact.html">Contact ZRN Solar</a></li>
         </ul>
       </div>
@@ -942,11 +933,19 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/918405987692" target="_blank" class="whatsapp-float-badge" id="whatsappFloatBadge"
-    aria-label="Chat on WhatsApp">
-    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-    <strong class="whatsapp-text">Chat on WhatsApp</strong>
-  </a>
+  <!-- Floating Action Buttons -->
+  <div class="floating-badge-container">
+    <a href="https://wa.me/918405987692" target="_blank" class="whatsapp-float-badge" id="whatsappFloatBadge"
+      aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+      <strong class="whatsapp-text">Chat on WhatsApp</strong>
+    </a>
+    <a href="contact.html" class="quote-float-badge" id="quoteFloatBadge"
+      aria-label="Get Free Quote">
+      <strong class="quote-float-text">Get Free Quote</strong>
+      <i class="fa-regular fa-circle-right quote-float-icon"></i>
+    </a>
+  </div>
 
   <script>
     // Mobile nav toggle

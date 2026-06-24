@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('section');
 
   // 1. Shrink header background on scroll
   window.addEventListener('scroll', () => {
@@ -15,26 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
-    }
-    
-    // Scroll Spy: Highlight active nav link based on section view
-    let currentSectionId = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120; // offset for nav height
-      const sectionHeight = section.offsetHeight;
-      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        currentSectionId = section.getAttribute('id');
-      }
-    });
-
-    if (currentSectionId) {
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSectionId}` || 
-            (currentSectionId === 'home' && link.getAttribute('href') === '#')) {
-          link.classList.add('active');
-        }
-      });
     }
   });
 
